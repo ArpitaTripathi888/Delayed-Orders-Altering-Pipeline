@@ -1,0 +1,30 @@
+End -to-End Data Pipeline for altering the delayed orders 
+
+1- Used Snowflake  - a cloud data warehouse to store raw  and transformed data .
+
+2- Used DBT - for data transformation, modeling and testing 
+
+3- used Apache Airflow for orchestration of  data workflow and dag scheduling
+
+4- used python for creating and exporting sample csv with dummy data
+
+
+SYSTEM DESIGN
+
+1- creating and exporting dummy data using python- customers.csv, orders.csv, shipments.csv
+
+2- load the raw data into the Snowflake - RAW Schema 
+
+3- transforming data using dbt
+
+4- load transformed into snowflake - Analytics Schema - view will be created 
+
+5- set up Apache Airflow Dag - 
+    i- to run dbt regularly
+    ii- to send email alerts if shipped>48 hrs 
+
+
+
+
+
+
